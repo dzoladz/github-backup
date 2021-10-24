@@ -10,7 +10,7 @@ def gitp(cwd, *args):
 	#print('git ' + cwd + ' ' + str(list(args)))
 	return subprocess.call(['git'] + list(args), cwd=cwd)
 
-if not os.path.isfile(CONFIG_PATH) : exit('Error: Config file ' + CONFIG_PATH + 'is missing, please create it')
+if not os.path.isfile(CONFIG_PATH) : exit('Error: Config file ' + CONFIG_PATH + ' is missing, please create it')
 
 config = configparser.ConfigParser()
 config.read(CONFIG_PATH)
